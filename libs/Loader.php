@@ -1,7 +1,13 @@
 <?php
 class Loader
 {
-
+    /**
+     * 
+     * @global array $config
+     * @param string $class naziv kotrolera koji se instancira
+     * @param string $method metod koji se poziva
+     * @param array $params parametri metode
+     */
     public static function loadController($class,$method,$params=array())
     {
         global $config;
@@ -26,6 +32,14 @@ class Loader
         else
         echo $config['Poruke']['noMethod'];
     }
+    
+    /**
+     * 
+     * @global array $config
+     * @param object $object objekat kontrolera
+     * @param string $model naziv modela
+     * @return \model_full_mame objekat modela
+     */
     public static function loadModel($object,$model)
     {
         global $config;
@@ -48,6 +62,12 @@ class Loader
             echo $config['Poruke']['noModel'];
         }  
     }
+    /**
+     * 
+     * @global array $config
+     * @param string $view naziv view-a
+     * @param array $params parametri za view
+     */
     public static function loadView($view,$params=array())
     {
         global $config;
