@@ -9,4 +9,4 @@ require_once 'libs/init.php';
 ///eeee
 ///pozdrav
 //zdravpo2222
-//gde ste tigrovi?
+///ojhahaaa
