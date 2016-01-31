@@ -15,7 +15,7 @@ foreach ($niz_regiona as $n_r)
 }
 ?>
     </select>
-    
+    <?php echo "cao123";?>
      <select name='cityList' id='cityList' style="display:none">
      </select>
     <select name='postalList' id='postalList' style="display:none">
