@@ -4,3 +4,4 @@ require_once 'config/config.php';
 require_once 'libs/init.php';
 
 //asdsadsadsad
+//jos nseto
