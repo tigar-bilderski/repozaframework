@@ -10,6 +10,11 @@
 abstract class baseController
 {
     protected $models=array();
+    /**
+     * 
+     * @param string $name naziv modela
+     * @param string $value objekat
+     */
     public function setModel($name,$value)
     {
         $this->models[$name]=$value;
