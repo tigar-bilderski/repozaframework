@@ -7,6 +7,11 @@ abstract class baseModel
     {
         $this->db=self::dbInstance();
     }
+    /**
+     * 
+     * @global array $config
+     * @return object database instance
+     */
     public static function dbInstance()
     {
         global $config;
