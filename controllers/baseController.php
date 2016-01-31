@@ -1,4 +1,7 @@
 <?php
+/**
+ * abstrktni kontroler koji sluzi za nasledjivanje
+ */
 abstract class baseController
 {
     protected $models=array();
