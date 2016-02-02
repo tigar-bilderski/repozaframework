@@ -1,4 +1,4 @@
-<a href='index.php?c=latlong&f=ubaciutabelu' id='ubaciUbazu' target='__blank'>Ubaci sadrzaj CSV fajla u tabelu</a>
+<a href='latlong/ubaciutabelu' id='ubaciUbazu' target='__blank'>Ubaci sadrzaj CSV fajla u tabelu</a>
     <br/>
     <br/>
     
