@@ -101,4 +101,11 @@ class latlongController extends baseController
        }
             
     }
+    
+    public function proba($a,$b,$c){
+        $t['a'] = $a;
+        $t['b'] = $b;
+        $t['c'] = $c;
+        Loader::loadView('proba',$t);
+    }
 }
