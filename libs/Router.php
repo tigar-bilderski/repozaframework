@@ -26,7 +26,7 @@ class Router
     }
     
     /**
-     * 
+     * Return controller name
      * @return string controller name
      */
     public function getController()
@@ -35,7 +35,7 @@ class Router
         return $this->controller;
     }
     /**
-     * 
+     * Return method name
      * @return string method name
      */
     public function getMethod()
@@ -44,7 +44,7 @@ class Router
         return $this->method;
     }
     /**
-     * 
+     * Return array of params 
      * @return array array of params
      */
     public function getParams()
