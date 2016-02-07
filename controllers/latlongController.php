@@ -3,13 +3,15 @@ class latlongController extends baseController
 {
     public function __construct()
     {
-       Loader::loadModel($this,'latlong');
+      //Loader::loadModel($this,'latlong');
     }
     public function index()
     {
         
-        $template['niz_regiona']=$this->models['latlong']->getRegions();
-        Loader::loadView('latlong',$template);
+        //$template['niz_regiona']=$this->models['latlong']->getRegions();
+        $r = new Registracija;
+        $r->index();
+        //Loader::loadView('latlong',$template);
     }
     public function ajaxLoadCities()
     {

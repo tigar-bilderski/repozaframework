@@ -68,11 +68,12 @@ class Loader
      * @param string $view naziv view-a
      * @param array $params parametri za view
      */
-    public static function loadView($view,$params=array())
+    public static function loadView($view,$params=array(),$module="")
     {
         global $config;
+        $module_folder = ($module != '')?'modules/'.$module."/":'';
         $path_to_header=realpath("views/headerView.php");
-        $path_to_view=realpath("views/".strtolower($view)."View.php");
+        $path_to_view=realpath($module_folder."views/".strtolower($view)."View.php");
         $path_to_footer=realpath("views/footerView.php");
         if (file_exists($path_to_view))
         {
