@@ -8,29 +8,30 @@ class Loader
      * @param string $method metod koji se poziva
      * @param array $params parametri metode
      */
-    public static function loadController($class,$method,$params=array())
+    public static function loadController($controller,$method,$params=array())
     {
         global $config;
-       
-        $controller_instance=new $class();
-        if (!is_subclass_of($controller_instance, 'baseController'))
-        {
-            echo $config['Poruke']['noBaseCont'];
-            die;
-        }
-        if(method_exists($controller_instance,$method))
-        {
-         $refl = new ReflectionMethod(get_class($controller_instance), $method);
-         $numParams = $refl->getNumberOfParameters();
-          if($numParams>0 && count($params)<$numParams)
-          {
-            echo $config['Poruke']['noParams'];
-            die;
-          }
-         call_user_func_array(array($controller_instance,$method), $params);
-        }
-        else
-        echo $config['Poruke']['noMethod'];
+        $path_to_controller = realpath("controllers/" . strtolower($controller) . "Controller.php");
+        if (file_exists($path_to_controller)) {
+            include_once $path_to_controller;
+            $controller=strtolower($controller)."Controller";
+            $controller_instance = new $controller();
+            if (!is_subclass_of($controller_instance, 'baseController')) {
+                echo $config['Poruke']['noBaseCont'];
+                die;
+            }
+            if (method_exists($controller_instance, $method)) {
+                $refl = new ReflectionMethod(get_class($controller_instance), $method);
+                $numParams = $refl->getNumberOfParameters();
+                if ($numParams > 0 && count($params) < $numParams) {
+                    echo $config['Poruke']['noParams'];
+                    die;
+                }
+                call_user_func_array(array($controller_instance, $method), $params);
+            } else
+                echo $config['Poruke']['noMethod'];
+        }else
+            echo $config['Poruke']['error404'];
     }
     
     /**
@@ -40,10 +41,11 @@ class Loader
      * @param string $model naziv modela
      * @return \model_full_mame objekat modela
      */
-    public static function loadModel($object,$model)
+    public static function loadModel($object,$model,$module="")
     {
         global $config;
-        $path_to_model=realpath("models/".strtolower($model)."Model.php");
+        $module_folder = ($module != '')?'modules/'.$module."/":'';
+        $path_to_model=realpath($module_folder."models/".strtolower($model)."Model.php");
         if (file_exists($path_to_model))
         {
             include_once  $path_to_model;
