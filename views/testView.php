@@ -178,7 +178,7 @@
                                     
                                 </div>
                                 <div class="panel-footer">
-                                    <button class="btn btn-default">Clear Form</button>                                    
+                                    <input type="button" onclick="$('#users')[0].reset();" value="Clear Form" class="btn btn-default">                                    
                                     <button class="btn btn-primary pull-right" id="btn_submit">Submit</button>
                                 </div>
                             </div>
@@ -197,21 +197,28 @@
             $(document).ready(function(){
                 $('#users').on('click','#btn_submit',function(e){
                     e.preventDefault();
-                   request = $.ajax({
-                        url: "probni/insertUsers",
-                        type: "post",
-                        dataType: 'json',
-                        data: $('#users').serialize(),
-                        success: function(response){
-                           console.log(response);
-                           if(response.error == false){
-                               $('#users')[0].reset();
-                               alert(response.message);
-                           }else{
-                               alert(response.message);
-                           }
-                        }   
-                     });
+                    alertify.confirm("Da li ste sigurni?",
+                            function(){
+                                request = $.ajax({
+                                    url: "probni/insertUsers",
+                                    type: "post",
+                                    dataType: 'json',
+                                    data: $('#users').serialize(),
+                                    success: function(response){
+                                       console.log(response);
+                                       if(response.error == false){
+                                           $('#users')[0].reset();
+                                            alertify.success(response.message);
+                                       }else{
+                                           alertify.success(response.message);
+                                       }
+                                    }   
+                            });
+                             
+                            },
+                            function(){
+                              alertify.error('Cancel');
+                            });
                 });
             });                   
         </script>
