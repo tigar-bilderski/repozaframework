@@ -1,11 +1,7 @@
 <?php
 /**
  * abstrktni kontroler koji sluzi za nasledjivanje
- * 
- * eeeeeeeeeee
- * kkkkkk
- * 
- * cao
+ *
  */
 abstract class baseController
 {
@@ -20,5 +16,14 @@ abstract class baseController
         $this->models[$name]=$value;
     }
     abstract public function index();
+    
+    /**
+     * Metoda koja filttrira korisnicki unos
+     * @param type $var
+     * @return string
+     */
+    public function filter_input($var){
+       return $var = filter_var($var,FILTER_SANITIZE_SPECIAL_CHARS);
+    }
 }
 
