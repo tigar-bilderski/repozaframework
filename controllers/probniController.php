@@ -2,27 +2,36 @@
 
 class probniController extends baseController
 {
+    private $loginModule;
     public function __construct()
     {
         //ucitana SimpleImage klasa iz foldera classes
         Loader::loadClass("SimpleImage");
         Loader::loadModel($this, "users");
+        $this->loginModule = new loginController();
+        
     }
-    public function index()
-    {
-//        $users = $this->models['users']->getAll("name","WHERE name='{$this->filter_input("abc'")}'");
-//        $string = $this->filter_input("1");
-//       $user = $this->models['users']->insert();
-//       dump($user);
-//        $users = $this->models['users'];
-//        $users->delete($this->filter_input("'2"));
-//        $users->id = "7";
-//        $users->name = "Dragan Peric";
-//        $users->email = "dragan.savic@link.co.rs";
-//        $users->password = "oprem";
-//        $users->update();
-        Loader::loadView("test");
+    public function index(){
+        $this->loginModule->index();
     }
+    
+    function login(){
+        $this->loginModule->login();
+    }
+    
+    function home(){
+        if(isset($_SESSION['name'])){
+             Loader::loadView("test");
+        }  else {
+            header("Location:index");
+        }
+       
+    }
+    function logOut(){
+        $this->loginModule->logOut();
+        header("Location:index");
+    }
+    
     public function insertUsers()
     {
         $name = $this->filter_input($_POST['name']);
@@ -47,6 +56,7 @@ class probniController extends baseController
         }
         $this->response($data);
     }
+    
     private function response($data){
         header("Content-type:application/json");
         echo json_encode($data);

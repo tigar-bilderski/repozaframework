@@ -19,32 +19,32 @@
         <!-- END MESSAGE BOX-->
 
         <!-- START PRELOADS -->
-        <audio id="audio-alert" src="views/audio/alert.mp3" preload="auto"></audio>
-        <audio id="audio-fail" src="views/audio/fail.mp3" preload="auto"></audio>
+        <audio id="audio-alert" src="<?=_WEB_PATH?>views/audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="<?=_WEB_PATH?>views/audio/fail.mp3" preload="auto"></audio>
         <!-- END PRELOADS -->             
         
     <!-- START SCRIPTS -->
         <!-- START PLUGINS -->
        
-        <script type="text/javascript" src="views/js/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="views/js/plugins/bootstrap/bootstrap.min.js"></script>                
+        <script type="text/javascript" src="<?=_WEB_PATH?>views/js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="<?=_WEB_PATH?>views/js/plugins/bootstrap/bootstrap.min.js"></script>                
         <!-- END PLUGINS -->
         
         <!-- THIS PAGE PLUGINS -->
-        <script type='text/javascript' src='views/js/plugins/icheck/icheck.min.js'></script>
-        <script type="text/javascript" src="views/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type='text/javascript' src='<?=_WEB_PATH?>views/js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="<?=_WEB_PATH?>views/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
         
-        <script type="text/javascript" src="views/js/plugins/bootstrap/bootstrap-datepicker.js"></script>                
-        <script type="text/javascript" src="views/js/plugins/bootstrap/bootstrap-file-input.js"></script>
-        <script type="text/javascript" src="views/js/plugins/bootstrap/bootstrap-select.js"></script>
-        <script type="text/javascript" src="views/js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
+        <script type="text/javascript" src="<?=_WEB_PATH?>views/js/plugins/bootstrap/bootstrap-datepicker.js"></script>                
+        <script type="text/javascript" src="<?=_WEB_PATH?>views/js/plugins/bootstrap/bootstrap-file-input.js"></script>
+        <script type="text/javascript" src="<?=_WEB_PATH?>views/js/plugins/bootstrap/bootstrap-select.js"></script>
+        <script type="text/javascript" src="<?=_WEB_PATH?>views/js/plugins/tagsinput/jquery.tagsinput.min.js"></script>
         <!-- END THIS PAGE PLUGINS -->       
         
         <!-- START TEMPLATE -->
 <!--        <script type="text/javascript" src="views/js/settings.js"></script>-->
         
-        <script type="text/javascript" src="views/js/plugins.js"></script>        
-        <script type="text/javascript" src="views/js/actions.js"></script>        
+        <script type="text/javascript" src="<?=_WEB_PATH?>views/js/plugins.js"></script>        
+        <script type="text/javascript" src="<?=_WEB_PATH?>views/js/actions.js"></script>        
         <!-- END TEMPLATE -->
     <!-- END SCRIPTS -->                   
     </body>

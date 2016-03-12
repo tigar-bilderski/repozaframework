@@ -10,13 +10,13 @@
         <link rel="icon" href="views/favicon.ico" type="image/x-icon" />
         <!-- END META SECTION -->
 <!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
-         <script type="text/javascript" src="views/js/plugins/jquery/jquery.min.js"></script>
-         <script type="text/javascript" src="views/js/plugins/alertify/alertify.js"></script>
+         <script type="text/javascript" src="<?=_WEB_PATH?>views/js/plugins/jquery/jquery.min.js"></script>
+         <script type="text/javascript" src="<?=_WEB_PATH?>views/js/plugins/alertify/alertify.js"></script>
          
         <!-- CSS INCLUDE -->        
-        <link rel="stylesheet" type="text/css" id="theme" href="views/css/theme-default.css"/>
-        <link rel="stylesheet" type="text/css" id="theme" href="views/js/plugins/alertify/css/alertify.css"/>
-        <link rel="stylesheet" type="text/css" id="theme" href="views/js/plugins/alertify/css/themes/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" id="theme" href="<?=_WEB_PATH?>views/css/theme-default.css"/>
+        <link rel="stylesheet" type="text/css" id="theme" href="<?=_WEB_PATH?>views/js/plugins/alertify/css/alertify.css"/>
+        <link rel="stylesheet" type="text/css" id="theme" href="<?=_WEB_PATH?>views/js/plugins/alertify/css/themes/bootstrap.css"/>
         <!-- EOF CSS INCLUDE -->                   
     </head>
     <body>
@@ -33,11 +33,11 @@
                     </li>
                     <li class="xn-profile">
                         <a href="#" class="profile-mini">
-                            <img src="views/assets/images/users/avatar.jpg" alt="John Doe"/>
+                            <img src="<?=_WEB_PATH?>views/assets/images/users/avatar.jpg" alt="John Doe"/>
                         </a>
                         <div class="profile">
                             <div class="profile-image">
-                                <img src="views/assets/images/users/avatar.jpg" alt="John Doe"/>
+                                <img src="<?=_WEB_PATH?>views/assets/images/users/avatar.jpg" alt="John Doe"/>
                             </div>
                             <div class="profile-data">
                                 <div class="profile-data-name">John Doe</div>

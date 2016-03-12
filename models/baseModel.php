@@ -39,6 +39,7 @@ abstract class baseModel
             return $res->fetchAll(PDO::FETCH_CLASS, get_called_class());
         } catch (PDOException $e) {
             echo $e->getMessage();
+            return false;
         }
     }
     /**
