@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <link rel="icon" href="views/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="<?=_WEB_PATH?>views/favicon.ico" type="image/x-icon" />
         <!-- END META SECTION -->
 <!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
          <script type="text/javascript" src="<?=_WEB_PATH?>views/js/plugins/jquery/jquery.min.js"></script>
