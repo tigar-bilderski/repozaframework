@@ -5,7 +5,6 @@ class Session {
             session_start();
     }
     public static function stop(){
-        //self::start();
         foreach($_SESSION as $k=>$v){
             unset($_SESSION[$k]);
         }

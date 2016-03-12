@@ -17,8 +17,8 @@
                     <!-- END SEARCH -->
                     <!-- SIGN OUT -->
                     <li class="xn-icon-button pull-right">
-<!--                        <a href="logOut" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>                        -->
-                        <a href="logOut">Log out</a>
+                        <a href="logOut" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>                        
+<!--                        <a href="logOut">Log out</a>-->
                     </li> 
                     <!-- END SIGN OUT -->
                     <!-- MESSAGES -->
