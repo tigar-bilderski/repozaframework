@@ -6,16 +6,22 @@ class loginController extends baseController
     }
 
     public function index()
-    {
-        $lng = Cookie::get("lng");
-        var_dump($lng);
-        Loader::loadView("login","login");
+    { 
+        if(!$lng = Cookie::get("lng")){
+            Session::set("lng", "rs");
+            Cookie::set("lng", "rs", "10", "/");
+        }else{
+            $lng = Cookie::get("lng");
+            Session::set("lng", $lng);
+        }
+        $template['lng'] = Session::get("lng");
+        Loader::loadView("login","login",$template);
     }
     
     public function login(){
             $email = $_POST['email'];
             $password = $_POST['password'];
-            Session::set("lng", "rs");
+            
             if(!empty($email) && !empty($password)){
                 $email = $this->filter_input($email);
                 $password = $this->filter_input($password);

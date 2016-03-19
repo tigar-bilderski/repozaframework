@@ -6,7 +6,7 @@ class Cookie{
 
     public static function get($cookie_name){
         if(isset($_COOKIE[$cookie_name])) return $_COOKIE[$cookie_name];
-         else return null;
+         else return false;
     }
     
     public static function delete($cookie_name) {

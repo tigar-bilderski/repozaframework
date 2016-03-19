@@ -1,18 +1,19 @@
 <?php
-
-class languagesController extends baseController{
+require "frontendController.php";
+class languagesController extends frontendController{
+    public function __construct() {
+        parent::__construct();
+    }
     
     public function index(){}
     
     public function changeLanguage($lng){
-        Session::set("lng", $lng);
+        Cookie::set("lng", $lng, "10", "/");
         header("Location:"._WEB_PATH."probni/home");
     }
     
     public function loginLanguage($lng){
-        var_dump($lng);
-        Session::set("lng", $lng);
-        Cookie::set("lng", $lng, "10", "/");
-        var_dump($_SESSION);
+      $cookie = Cookie::set("lng", $lng, "10", "/");
+      header("Location:"._WEB_PATH."");
     }
 }

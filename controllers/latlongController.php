@@ -1,10 +1,12 @@
 <?php
-class latlongController extends baseController
+require "frontendController.php";
+class latlongController extends frontendController
 {
-    public function __construct()
-    {
-      //Loader::loadModel($this,'latlong');
+   
+     public function __construct() {
+        parent::__construct();
     }
+   
     public function index()
     {
         

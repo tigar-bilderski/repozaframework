@@ -1,6 +1,6 @@
 <?php
 include "latlongController.php";
-class latlongapiController extends latlongController
+class latlongapiController extends frontendController
 {
     public function __construct()
     {

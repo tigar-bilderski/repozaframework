@@ -1,14 +1,17 @@
 <?php
-
-class probniController extends baseController
+require "frontendController.php";
+class probniController extends frontendController
 {
     private $loginModule;
+    
     public function __construct()
     {
         //ucitana SimpleImage klasa iz foldera classes
+        parent::__construct();
         Loader::loadClass("SimpleImage");
         Loader::loadModel($this, "users");
         $this->loginModule = new loginController();
+        
         
     }
     public function index(){
@@ -21,7 +24,8 @@ class probniController extends baseController
     
     function home(){
         if(isset($_SESSION['name'])){
-             Loader::loadView("test");
+            $template['lng']= Cookie::get("lng");
+            Loader::loadView("test", "", $template);
         }  else {
             header("Location:index");
         }
