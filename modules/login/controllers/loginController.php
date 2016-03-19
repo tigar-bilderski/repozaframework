@@ -7,13 +7,15 @@ class loginController extends baseController
 
     public function index()
     {
+        $lng = Cookie::get("lng");
+        var_dump($lng);
         Loader::loadView("login","login");
     }
     
     public function login(){
             $email = $_POST['email'];
             $password = $_POST['password'];
-
+            Session::set("lng", "rs");
             if(!empty($email) && !empty($password)){
                 $email = $this->filter_input($email);
                 $password = $this->filter_input($password);

@@ -1,9 +1,11 @@
 <div class="login-container">
-        
+        <?php //$lngCookie = Cookie::set("lng", "rs", "10"); 
+           // Cookie::set("lng", "", $days)
+        ?>
             <div class="login-box animated fadeInDown">
                 <div class="login-logo"></div>
                 <div class="login-body">
-                    <div class="login-title"><strong>Log In</strong> to your account</div>
+                    <div class="login-title"><strong>Log In</strong> to your account  <br><div style="margin: auto; width: 18%"> <a  data-lng="sr" id="sr" title="SR" href=""><span class="flag-icon flag-icon-rs"></span></a> <a data-lng="gb" id="en" title="EN" href=""><span class="flag-icon flag-icon-gb"></span></a></div></div>
                     <form action="/repozaframework/probni/login" class="form-horizontal" method="post">
                     <div class="form-group">
                         <div class="col-md-12">

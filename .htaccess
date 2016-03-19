@@ -1,4 +1,5 @@
 RewriteEngine On
+RewriteBase /repozaframework
 RewriteRule ^([A-Za-z0-9-_/]+)?$ index.php?rt=$1 [NC,L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f

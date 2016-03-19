@@ -5,3 +5,6 @@ $config['Poruke']=array
     "noBaseCont"=>"Morate naslediti klasu baseController","noBaseMod"=>"Morate naslediti klasu baseModel",
     "noClass"=>"Ucitavate nepostojecu biblioteku");
 
+$config['prevod'] = array(
+    "users"=>array("rs"=>"Upravljanje korisnika","gb"=>"User management")
+);

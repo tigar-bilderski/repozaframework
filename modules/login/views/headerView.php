@@ -9,7 +9,12 @@
         
         <link rel="icon" href="<?=_WEB_PATH?>views/favicon.ico" type="image/x-icon" />
         <!-- END META SECTION -->
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+         <!-- FLAG ICON-->
+         <link rel="stylesheet" type="text/css" href="<?=_WEB_PATH?>views/css/iconFlag/flag-icon.min.css">
+         <link rel="stylesheet" type="text/css" href="<?=_WEB_PATH?>views/assets/docs.css">
+         <script src="<?=_WEB_PATH?>/views/js/docs.js"></script>
+         <!-- EOF FLAG ICON -->
         <!-- CSS INCLUDE -->        
         <link rel="stylesheet" type="text/css" id="theme" href="<?=_WEB_PATH?>views/css/theme-default.css"/>
         <!-- EOF CSS INCLUDE -->                                    
