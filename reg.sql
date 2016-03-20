@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2016 at 05:40 PM
+-- Generation Time: Mar 20, 2016 at 09:26 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -34,16 +34,24 @@ CREATE TABLE IF NOT EXISTS `navigation` (
   `nav_class` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `active` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `status` varchar(1) COLLATE utf8_unicode_ci NOT NULL,
+  `sort` int(11) NOT NULL,
+  `parent` tinyint(1) NOT NULL,
+  `id_parent` int(10) unsigned NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `navigation`
 --
 
-INSERT INTO `navigation` (`ID`, `name`, `link`, `icon_class`, `nav_class`, `active`, `status`) VALUES
-(1, 'dashboard', 'probni/home', 'fa fa-desktop', 'xn-text', 'active', '1'),
-(2, 'users', '', 'fa fa-users', 'xn-text', '', '1');
+INSERT INTO `navigation` (`ID`, `name`, `link`, `icon_class`, `nav_class`, `active`, `status`, `sort`, `parent`, `id_parent`) VALUES
+(1, 'dashboard', 'dashboard/home', 'fa fa-desktop', '', 'active', '1', 1, 0, 0),
+(2, 'users', '', 'fa fa-users', 'xn-openable', '', '1', 2, 1, 0),
+(4, 'search_users', 'users/search', 'fa fa-search', 'xn-text', '', '1', 4, 0, 2),
+(3, 'insert_users', 'users/insert', 'fa fa-user', 'xn-text', '', '1', 3, 0, 2),
+(5, 'debts', '', 'fa fa-eur', 'xn-openable', '', '1', 5, 1, 0),
+(6, 'insert_debts', 'debts/insert', 'fa fa-database', 'xn-text', '', '1', 6, 0, 5),
+(7, 'debts_review', 'debts/review', 'fa fa-bar-chart-o', 'xn-text', '', '1', 7, 0, 5);
 
 -- --------------------------------------------------------
 
@@ -57,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=19 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `users`
@@ -75,7 +83,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
 (15, '', '', ''),
 (16, 'or &#39;1&#39;=&#39;1&#39;', 'sadas ;;;;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#34;&#34;&#34;', '&#34;&#34;&#34;sad'),
 (17, 'Goran Mladenovic', 'gowasdasd@sadas.com', 'sadsadsadads'),
-(18, '', '', '');
+(18, '', '', ''),
+(19, '', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
