@@ -9,7 +9,7 @@ class languagesController extends frontendController{
     
     public function changeLanguage($lng){
         Cookie::set("lng", $lng, "10", "/");
-        header("Location:"._WEB_PATH."probni/home");
+        header("Location:"._WEB_PATH."dashboard/home");
     }
     
     public function loginLanguage($lng){

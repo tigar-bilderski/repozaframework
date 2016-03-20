@@ -11,7 +11,7 @@
                             <a data-lng="fr" id="en" title="FR" href="<?=_WEB_PATH?>languages/loginLanguage/fr"><span class="flag-icon flag-icon-fr"></span></a>
                         </div>
                     </div>
-                    <form action="/repozaframework/probni/login" class="form-horizontal" method="post">
+                    <form action="/repozaframework/dashboard/login" class="form-horizontal" method="post">
                     <div class="form-group">
                         <div class="col-md-12">
                             <input type="text" name="email" class="form-control" placeholder="<?= $config['prevod']['email']["{$lng}"]?>"/>

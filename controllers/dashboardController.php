@@ -1,6 +1,6 @@
 <?php
 require "frontendController.php";
-class probniController extends frontendController
+class dashboardController extends frontendController
 {
     private $loginModule;
     
