@@ -56,23 +56,18 @@
                         </div>                                                                        
                     </li>
                     <li class="xn-openable">
-                        <a href="#"><span class="fa fa-language"></span><?= $config['prevod']['languages_nav']["{$lng}"]?></a>
+                        <a href="#"><span class="fa fa-language"></span><span class="xn-text"><?= $config['prevod']['languages_nav']["{$lng}"]?></span></a>
                         <ul>
                             <li><a href="<?=_WEB_PATH?>languages/changeLanguage/rs" > <span class="flag-icon flag-icon-rs"></span> <?= $config['prevod']['languages_names']["{$lng}"]['rs']?></a></li>
                             <li><a href="<?=_WEB_PATH?>languages/changeLanguage/gb" > <span class="flag-icon flag-icon-gb"></span> <?= $config['prevod']['languages_names']["{$lng}"]['gb']?></a></li>
                             <li><a href="<?=_WEB_PATH?>languages/changeLanguage/de" > <span class="flag-icon flag-icon-de"></span> <?= $config['prevod']['languages_names']["{$lng}"]['de']?></a></li>
                             <li><a href="<?=_WEB_PATH?>languages/changeLanguage/fr" > <span class="flag-icon flag-icon-fr"></span> <?= $config['prevod']['languages_names']["{$lng}"]['fr']?></a></li>
+                            <li><a href="<?=_WEB_PATH?>languages/changeLanguage/es" > <span class="flag-icon flag-icon-es"></span> <?= $config['prevod']['languages_names']["{$lng}"]['es']?></a></li>
                         </ul>
                     </li> 
                     <li class="xn-title">Navigation</li>
                     <?php $nav = new Navigation; echo $nav->renderNav($lng);?>
-<!--                    <li class="active">
-                        <a href="maps.html"><span class="fa fa-desktop"></span> <span class="xn-text"><?= $config['prevod']['dashboard']["{$lng}"] ?></a>
-                    </li>
-                    <li>
-                        <a href="index.html"><span class="fa fa-users"></span> <span class="xn-text"><?= $config['prevod']['users']["{$lng}"] ?></span></a>
-                    </li>  -->
-
+                    
                 </ul>
                 <!-- END X-NAVIGATION -->
             </div>

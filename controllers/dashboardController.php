@@ -25,7 +25,7 @@ class dashboardController extends frontendController
     function home(){
         if(isset($_SESSION['name'])){
             $template['lng']= Cookie::get("lng");
-            Loader::loadView("test", "", $template);
+            Loader::loadView("test", "", false ,$template);
         }  else {
             header("Location:index");
         }

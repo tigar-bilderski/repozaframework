@@ -70,13 +70,13 @@ class Loader
      * @param string $view naziv view-a
      * @param array $params parametri za view
      */
-    public static function loadView($view, $module="", $params=array())
+    public static function loadView($view, $module="",$from_module = false, $params=array())
     {
         global $config;
         $module_folder = ($module != '')?'modules/'.$module."/":'';
-        $path_to_header=realpath($module_folder."views/headerView.php");
+        $path_to_header=($from_module===true)?realpath($module_folder."views/headerView.php"):realpath("views/headerView.php");
         $path_to_view=realpath($module_folder."views/".strtolower($view)."View.php");
-        $path_to_footer=realpath($module_folder."views/footerView.php");
+        $path_to_footer=($from_module===true)?realpath($module_folder."views/footerView.php"):realpath("views/footerView.php");
         if (file_exists($path_to_view))
         {
             extract($params);

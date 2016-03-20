@@ -1,6 +1,6 @@
 <?php 
 define("_MODULE_MODE_", true);
-$modules = ['registracija','login'];
+$modules = ['registracija','login','users'];
 if(_MODULE_MODE_){
     function autoload_module($className) {
         global $modules;

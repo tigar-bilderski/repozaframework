@@ -20,7 +20,7 @@ class loginController extends baseController
             Session::set("lng", $lng);
         }
         $template['lng'] = Session::get("lng");
-        Loader::loadView("login","login",$template);
+        Loader::loadView("login","login",true,$template);
     }
     /**
      * 

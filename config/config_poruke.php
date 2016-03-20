@@ -8,6 +8,12 @@ $config['Poruke']=array
 $config['prevod'] = array(
     "dashboard"=>array("rs"=>"Kontrolna tabla","gb"=>"Dashboard"),
     
+    "debts"=>array("rs"=>"Dugovanja","gb"=>"Debts"),
+    
+    "insert_debts"=>array("rs"=>"Unos dugovanja","gb"=>"Insert debts"),
+    
+    "debts_review"=>array("rs"=>"Pregled dugovanja","gb"=>"Debts review "),
+    
     "users"=>array("rs"=>"Upravljanje korisnicima","gb"=>"User management"),
     
     "login"=>array("rs"=>"Logujte se na svoj nalog","gb"=>"Log in to your account"),
@@ -35,11 +41,17 @@ $config['prevod'] = array(
     "languages_nav"=>array("rs"=>"Jezici","gb"=>"Languages","de"=>"Sprache","fr"=>"Langue"),
     
     "languages_names"=>array(
-        "gb"=>array("rs"=>"Serbian","gb"=>"English","de"=>"German","fr"=>"France"),
-        "rs"=>array("rs"=>"Srpski","gb"=>"Engleski","de"=>"Nemački","fr"=>"Francuski"),
+        "gb"=>array("rs"=>"Serbian","gb"=>"English","de"=>"German","fr"=>"France","es"=>"Spanish"),
+        "rs"=>array("rs"=>"Srpski","gb"=>"Engleski","de"=>"Nemački","fr"=>"Francuski","es"=>"Španski"),
         "fr"=>array("rs"=>"Serbe","gb"=>"Anglais","de"=>"Allemand","fr"=>"France"),
-        "de"=>array("rs"=>"Serbisch","gb"=>"Englisch","de"=>"Deutsche","fr"=>"Frankreich")
-    )
+        "de"=>array("rs"=>"Serbisch","gb"=>"Englisch","de"=>"Deutsche","fr"=>"Frankreich"),
+        "es"=>array("rs"=>"Serbio","gb"=>"Spanish","de"=>"Spanisch","fr"=>"Espanol")
+    ),
+    
+    "insert_users"=>array("rs"=>"Unos korisnika","gb"=>"Insert users"),
+    "search_users"=>array("rs"=>"Pretraga korisnika","gb"=>"Search users")
+    
+    
             
     
 );
