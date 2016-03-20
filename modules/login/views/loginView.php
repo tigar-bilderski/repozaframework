@@ -2,7 +2,15 @@
           <div class="login-box animated fadeInDown">
                 <div class="login-logo"></div>
                 <div class="login-body">
-                    <div class="login-title"><span id="login"><?= $config['prevod']['login']["{$lng}"] ?> </span> <br><div style="margin: auto; width: 18%"> <a data-lng="rs" id="sr" title="SR" href="<?=_WEB_PATH?>languages/loginLanguage/rs"><span class="flag-icon flag-icon-rs"></span></a> <a data-lng="gb" id="en" title="EN" href="<?=_WEB_PATH?>languages/loginLanguage/gb"><span class="flag-icon flag-icon-gb"></span></a></div></div>
+                    <div class="login-title">
+                        <span id="login"><?= $config['prevod']['login']["{$lng}"] ?> </span> <br>
+                        <div style="margin: auto; width: 40%"> 
+                            <a data-lng="rs" id="sr" title="SR" href="<?=_WEB_PATH?>languages/loginLanguage/rs"><span class="flag-icon flag-icon-rs"></span></a> 
+                            <a data-lng="gb" id="en" title="EN" href="<?=_WEB_PATH?>languages/loginLanguage/gb"><span class="flag-icon flag-icon-gb"></span></a>
+                            <a data-lng="de" id="en" title="DE" href="<?=_WEB_PATH?>languages/loginLanguage/de"><span class="flag-icon flag-icon-de"></span></a>
+                            <a data-lng="fr" id="en" title="FR" href="<?=_WEB_PATH?>languages/loginLanguage/fr"><span class="flag-icon flag-icon-fr"></span></a>
+                        </div>
+                    </div>
                     <form action="/repozaframework/probni/login" class="form-horizontal" method="post">
                     <div class="form-group">
                         <div class="col-md-12">
@@ -51,20 +59,3 @@
                 </div>
             </div>
         </div>
-<script>
-//$('#sr').click(function(e){
-//    e.preventDefault();
-//    var lng = $(this).attr('data-lng');
-//    var js ='+'["'+lng+'"]';
-//    console.log(js);
-//    //$('#login').html('');
-//    console.log(lng);
-//    changeLanguage(lng);
-//});
-//
-//$('#en').click(function(e){
-//    e.preventDefault();
-//    var lng = $(this).attr('data-lng');
-//    changeLanguage(lng);
-//});
-</script>

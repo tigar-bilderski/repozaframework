@@ -86,27 +86,26 @@
                 $('#users').on('click','#btn_submit',function(e){
                     e.preventDefault();
                     alertify.confirm("Da li ste sigurni?",
-                            function(){
-                                request = $.ajax({
-                                    url: "insertUsers",
-                                    type: "post",
-                                    dataType: 'json',
-                                    data: $('#users').serialize(),
-                                    success: function(response){
-                                       console.log(response);
-                                       if(response.error == false){
-                                           $('#users')[0].reset();
-                                            alertify.success(response.message);
-                                       }else{
-                                           alertify.success(response.message);
-                                       }
-                                    }   
+                    function(){
+                        request = $.ajax({
+                            url: "insertUsers",
+                            type: "post",
+                            dataType: 'json',
+                            data: $('#users').serialize(),
+                            success: function(response){
+                            console.log(response);
+                                if(response.error == false){
+                                 $('#users')[0].reset();
+                                    alertify.success(response.message);
+                                  }else{
+                                    alertify.success(response.message);
+                                  }
+                                }   
                             });
-                             
                             },
-                            function(){
-                              alertify.error('Cancel');
-                            });
+                        function(){
+                            alertify.error('Cancel');
+                        });
                 });
             });                   
         </script>

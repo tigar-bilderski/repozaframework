@@ -32,4 +32,14 @@ $config['prevod'] = array(
     
     "contact_us"=>array("rs"=>"Kontaktirajte Nas","gb"=>"Contact Us"),
     
+    "languages_nav"=>array("rs"=>"Jezici","gb"=>"Languages","de"=>"Sprache","fr"=>"Langue"),
+    
+    "languages_names"=>array(
+        "gb"=>array("rs"=>"Serbian","gb"=>"English","de"=>"German","fr"=>"France"),
+        "rs"=>array("rs"=>"Srpski","gb"=>"Engleski","de"=>"Nemački","fr"=>"Francuski"),
+        "fr"=>array("rs"=>"Serbe","gb"=>"Anglais","de"=>"Allemand","fr"=>"France"),
+        "de"=>array("rs"=>"Serbisch","gb"=>"Englisch","de"=>"Deutsche","fr"=>"Frankreich")
+    )
+            
+    
 );

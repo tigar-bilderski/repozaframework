@@ -55,6 +55,15 @@
                             </div>
                         </div>                                                                        
                     </li>
+                    <li class="xn-openable">
+                        <a href="#"><span class="fa fa-language"></span><?= $config['prevod']['languages_nav']["{$lng}"]?></a>
+                        <ul>
+                            <li><a href="<?=_WEB_PATH?>languages/changeLanguage/rs" > <span class="flag-icon flag-icon-rs"></span> <?= $config['prevod']['languages_names']["{$lng}"]['rs']?></a></li>
+                            <li><a href="<?=_WEB_PATH?>languages/changeLanguage/gb" > <span class="flag-icon flag-icon-gb"></span> <?= $config['prevod']['languages_names']["{$lng}"]['gb']?></a></li>
+                            <li><a href="<?=_WEB_PATH?>languages/changeLanguage/de" > <span class="flag-icon flag-icon-de"></span> <?= $config['prevod']['languages_names']["{$lng}"]['de']?></a></li>
+                            <li><a href="<?=_WEB_PATH?>languages/changeLanguage/fr" > <span class="flag-icon flag-icon-fr"></span> <?= $config['prevod']['languages_names']["{$lng}"]['fr']?></a></li>
+                        </ul>
+                    </li> 
                     <li class="xn-title">Navigation</li>
                     <?php $nav = new Navigation; echo $nav->renderNav($lng);?>
 <!--                    <li class="active">
@@ -63,6 +72,7 @@
                     <li>
                         <a href="index.html"><span class="fa fa-users"></span> <span class="xn-text"><?= $config['prevod']['users']["{$lng}"] ?></span></a>
                     </li>  -->
+
                 </ul>
                 <!-- END X-NAVIGATION -->
             </div>
@@ -91,9 +101,10 @@
                     </li> 
                     <?php //var_dump($_SERVER['SERVER_NAME']); ?>
                         <li class="xn-icon-button pull-right">
-                            <a href="<?=_WEB_PATH?>languages/changeLanguage/<?php echo($lng == "rs")?'gb':'rs' ?>" ><span class="flag-icon flag-icon-<?php echo($lng == "rs")?'gb':'rs' ?>"></span></a>
-      
-                        </li>
+                            <a href="#" ><span class="flag-icon flag-icon-<?=$lng?>"></span></a>
+                       </li>
+                       
+<!--                      </div>-->
                     <!-- MESSAGES -->
                     <li class="xn-icon-button pull-right">
                         <a href="#"><span class="fa fa-comments"></span></a>
@@ -185,3 +196,4 @@
                     </li>
                     <!-- END TASKS -->
                 </ul>
+                

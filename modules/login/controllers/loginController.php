@@ -1,10 +1,15 @@
 <?php
+/**
+ * 
+ */
 class loginController extends baseController
 {
     public function __construct() {
         Loader::loadModel($this, "login", "login");
     }
-
+    /**
+     * 
+     */
     public function index()
     { 
         if(!$lng = Cookie::get("lng")){
@@ -17,7 +22,9 @@ class loginController extends baseController
         $template['lng'] = Session::get("lng");
         Loader::loadView("login","login",$template);
     }
-    
+    /**
+     * 
+     */
     public function login(){
             $email = $_POST['email'];
             $password = $_POST['password'];
