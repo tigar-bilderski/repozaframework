@@ -4,11 +4,12 @@
                 <div class="login-body">
                     <div class="login-title">
                         <span id="login"><?= $config['prevod']['login']["{$lng}"] ?> </span> <br>
-                        <div style="margin: auto; width: 40%"> 
+                        <div style="margin: auto; width: 50%"> 
                             <a data-lng="rs" id="sr" title="SR" href="<?=_WEB_PATH?>languages/loginLanguage/rs"><span class="flag-icon flag-icon-rs"></span></a> 
                             <a data-lng="gb" id="en" title="EN" href="<?=_WEB_PATH?>languages/loginLanguage/gb"><span class="flag-icon flag-icon-gb"></span></a>
-                            <a data-lng="de" id="en" title="DE" href="<?=_WEB_PATH?>languages/loginLanguage/de"><span class="flag-icon flag-icon-de"></span></a>
-                            <a data-lng="fr" id="en" title="FR" href="<?=_WEB_PATH?>languages/loginLanguage/fr"><span class="flag-icon flag-icon-fr"></span></a>
+                            <a data-lng="de" id="de" title="DE" href="<?=_WEB_PATH?>languages/loginLanguage/de"><span class="flag-icon flag-icon-de"></span></a>
+                            <a data-lng="fr" id="fr" title="FR" href="<?=_WEB_PATH?>languages/loginLanguage/fr"><span class="flag-icon flag-icon-fr"></span></a>
+                            <a data-lng="es" id="es" title="ES" href="<?=_WEB_PATH?>languages/loginLanguage/es"><span class="flag-icon flag-icon-es"></span></a>
                         </div>
                     </div>
                     <form action="/repozaframework/dashboard/login" class="form-horizontal" method="post">
