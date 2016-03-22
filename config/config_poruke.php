@@ -45,7 +45,7 @@ $config['prevod'] = array(
         "rs"=>array("rs"=>"Srpski","gb"=>"Engleski","de"=>"Nemački","fr"=>"Francuski","es"=>"Španski"),
         "fr"=>array("rs"=>"Serbe","gb"=>"Anglais","de"=>"Allemand","fr"=>"France","es"=>"Español"),
         "de"=>array("rs"=>"Serbisch","gb"=>"Englisch","de"=>"Deutsche","fr"=>"Frankreich","es"=>"Spanisch"),
-        "es"=>array("rs"=>"Serbio","gb"=>"Spanish","de"=>"Spanisch","fr"=>"Espanol","es"=>"Español"),
+        "es"=>array("rs"=>"Serbio","gb"=>"Inglés","de"=>"Alemán","fr"=>"Francia","es"=>"Español"),
     ),
     
     "insert_users"=>array("rs"=>"Unos korisnika","gb"=>"Insert users","de"=>"Legen Sie Benutzer","fr"=>"Utilisateurs Insérer","es"=>"Los usuarios insertan"),
