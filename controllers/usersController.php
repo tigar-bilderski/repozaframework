@@ -16,4 +16,8 @@ class usersController extends frontendController{
         $this->usersModul->insert();
     }
     
+     public function insertUsers(){
+        $this->usersModul->insertUsers();
+    }
+    
 }

@@ -23,7 +23,16 @@ abstract class baseController
      * @return string
      */
     public function filter_input($var){
+       $var = trim($var);
        return $var = filter_var($var,FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+    
+    /**
+     * Metoda koja vraca json
+     * @param json $data
+     */
+    public function response($data){
+        echo json_encode($data);
     }
 }
 
