@@ -61,8 +61,5 @@ class dashboardController extends frontendController
         $this->response($data);
     }
     
-    private function response($data){
-        header("Content-type:application/json");
-        echo json_encode($data);
-    }
+    
 }
