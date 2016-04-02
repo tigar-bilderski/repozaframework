@@ -56,8 +56,9 @@
                             </div>
                         </div>                                                                        
                     </li>
+                   
                     <li class="xn-openable">
-                        <a href="#"><span class="fa fa-language"></span><span class="xn-text"><?= $config['prevod']['languages_nav']["{$lng}"]?></span></a>
+                        <a href="#"><span class="flag-icon flag-icon-<?=$lng?>"></span> <span class="xn-text"><?= $config['prevod']['languages_nav']["{$lng}"]?></span></a>
                         <ul>
                             <li><a href="<?=_WEB_PATH?>languages/changeLanguage/rs" > <span class="flag-icon flag-icon-rs"></span> <?= $config['prevod']['languages_names']["{$lng}"]['rs']?></a></li>
                             <li><a href="<?=_WEB_PATH?>languages/changeLanguage/gb" > <span class="flag-icon flag-icon-gb"></span> <?= $config['prevod']['languages_names']["{$lng}"]['gb']?></a></li>
@@ -96,9 +97,7 @@
 <!--                        <a href="logOut">Log out</a>-->
                     </li> 
                     <?php //var_dump($_SERVER['SERVER_NAME']); ?>
-                        <li class="xn-icon-button pull-right">
-                            <a href="#" ><span class="flag-icon flag-icon-<?=$lng?>"></span></a>
-                       </li>
+                        
                        
 <!--                      </div>-->
                     <!-- MESSAGES -->
