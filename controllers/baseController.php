@@ -27,6 +27,18 @@ abstract class baseController
        return $var = filter_var($var,FILTER_SANITIZE_SPECIAL_CHARS);
     }
     
+      /**
+     * Validate user input 
+     * @param array $datas
+     * @return array
+     */
+    public function validate($datas){
+       foreach($datas as $data){
+           $this->filter_input($data);
+       }
+       return $datas;
+   }
+    
     /**
      * Metoda koja vraca json
      * @param json $data
